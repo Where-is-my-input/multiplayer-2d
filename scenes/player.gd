@@ -4,12 +4,16 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-func _enter_tree() -> void:
+func _ready() -> void:
 	set_multiplayer_authority(name.to_int())
+	
+	# setting this here because only the owner has authority to set it
+	position = Vector2(455, 79)
 
 
 func _physics_process(delta: float) -> void:
 	if !is_multiplayer_authority(): return
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
