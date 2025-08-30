@@ -18,3 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 HighLevelNetworkHandler="*res://scenes/highLevelNetwork/highLevelNetworkHandler.gd"
+LowLevelNetworkHandler="*res://scenes/lowLevelNetowrk/lowLevelNetworkHandler.gd"
+ClientNetworkGlobals="*res://scenes/lowLevelNetowrk/clientNetworkGlobals.gd"
+ServerNetworkGlobals="*res://scenes/lowLevelNetowrk/serverNetworkGlobals.gd"
